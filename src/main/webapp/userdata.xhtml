@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:f="http://java.sun.com/jsf/core">
+    
+    <h:head>
+    <title>User Data</title>
+    </h:head>
+    <h:body>
+    <h2>Data Table Example</h2>
+    <h:form>
+    	<h:dataTable value="#{data.students}" var = "students">
+    		<h:column>
+    		<f:facet name="header">NAME</f:facet>
+    		#{students.name}
+    		</h:column>
+    		<h:column>
+    		<f:facet name="header">CLASS</f:facet>
+    		#{students.usrClass}
+    		</h:column>
+    		<h:column>
+    		<f:facet name="header">ROLL NO</f:facet>
+    		#{students.rollNo}
+    		</h:column>
+    		<h:column>
+    		<f:facet name="header">AGE</f:facet>
+    		#{students.age}
+    		</h:column>
+    	</h:dataTable>
+    	<hr/>
+    	<h3>Add Student</h3>
+    	<table>
+    	<tr>
+    	<td>NAME:</td>
+    	<td><h:inputText value="#{data.name}"/></td>
+    	</tr>
+    	<tr>
+    	<td>CLASS:</td>
+    	<td><h:inputText value="#{data.usrClass}"/></td>
+    	</tr>
+    	<tr>
+    	<td>ROLL NO:</td>
+    	<td><h:inputText value="#{data.rollNo}"/></td>
+    	</tr>
+    	<tr>
+    	<td>AGE:</td>
+    	<td><h:inputText value="#{data.age}"/></td>
+    	</tr>
+    	<tr>
+    	<td></td>
+    	<td><h:commandButton value="Add" action="#{data.addStudent}" /></td>
+    	</tr>
+    	</table>
+    </h:form>
+    </h:body>
+    
+     </html>
